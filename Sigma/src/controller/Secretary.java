@@ -5,6 +5,10 @@
  */
 package controller;
 
-public class Employee extends  People{
+/**
+ *
+ * @author Thiago Poeta
+ */
+public class Secretary extends Employee{
     
 }
