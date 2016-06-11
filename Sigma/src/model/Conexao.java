@@ -15,9 +15,9 @@ public class Conexao {
         else{
             try{
                 String driver = "com.mysql.jdbc.Driver";
-                String url = "jdbc:mysql://localhost/sigma";
-                String user = "root";
-                String password = "root12";
+                String url = "jdbc:mysql://177.41.144.242/sigma";
+                String user = "sigma";
+                String password = "sigma";
             
                 Class.forName(driver);
                 conexao = DriverManager.getConnection(url,user,password);
