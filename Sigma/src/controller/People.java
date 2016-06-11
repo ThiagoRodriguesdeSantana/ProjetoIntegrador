@@ -9,6 +9,8 @@ public abstract class People {
     private String address;
     private String addressComp;
     private long fone;
+    private String login;
+    private long senha;
 
     public int getRecord() { return record; }
     public void setRecord(int record) { this.record = record;}
@@ -22,6 +24,10 @@ public abstract class People {
     public void setAddressComp(String addressComp) {this.addressComp = addressComp;  }
     public long getFone() { return fone; }
     public void setFone(long fone) { this.fone = fone; }
+    public String getLogin() {return login;}
+    public void setLogin(String login) { this.login = login;}
+    public long getSenha() {return senha;}
+    public void setSenha(long senha) {this.senha = senha;}
     
     
     
