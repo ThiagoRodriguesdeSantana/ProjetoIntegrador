@@ -4,20 +4,24 @@ package controller;
 public class Aluno extends Pessoa{
     
     private String curso;
-    private String situacao;
+    private int estado;
 
     
+    public Aluno(){
+        
+    }
     
-    public Aluno(int id, String nome, long cpf, String endereco,String telefone, String senha, int tipo, String curso,String situacao ) {
+    public Aluno(int id, String nome, String cpf, String endereco,String telefone, String senha, int tipo, String curso,int estado ) {
         super(id, nome, cpf, telefone, endereco, senha, tipo);
         this.curso = curso;
-        this.situacao = situacao;
+        this.estado = estado;
     }
     
 
     public String getCurso() { return curso;}
     public void setCurso(String curso) { this.curso = curso;}
-    public void setSituacao(String situacao) { this.situacao = situacao; }
+    public void setEstado(int estado) { this.estado = estado; }
+    public int getEstado(){return estado;}
 
     
 }

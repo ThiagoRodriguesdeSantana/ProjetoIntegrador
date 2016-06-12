@@ -4,7 +4,7 @@ package controller;
 public abstract class Pessoa {
     
     protected int Id;
-    protected long cpf;
+    protected String cpf;
     protected String nome;
     protected String endereco;
     protected String telefone;
@@ -15,7 +15,7 @@ public abstract class Pessoa {
         
     }
     
-    public Pessoa(int id, String nome, long cpf,String endereco,String telefone,String senha,int tipo ){
+    public Pessoa(int id, String nome, String cpf,String endereco,String telefone,String senha,int tipo ){
         
         this.Id = id;
         this.nome = this.nome;
@@ -30,8 +30,8 @@ public abstract class Pessoa {
 
     public int getId() { return Id; }
     public void setId(int record) { this.Id = record;}
-    public long getCpf() {   return cpf; }
-    public void setCpf(long cpf) {  this.cpf = cpf; }
+    public String getCpf() {   return cpf; }
+    public void setCpf(String cpf) {  this.cpf = cpf; }
     public String getNome() { return nome;}
     public void setNome(String nome) { this.nome = nome; }
     public String getEndereco() {return endereco; }
