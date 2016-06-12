@@ -7,6 +7,13 @@ public class Student extends People{
     private String course;
     private String situacao;
 
+    
+    
+    public Student(int id, String nome, long cpf, String address,String fone, String password, int type) {
+        super(id, nome, cpf, fone, address, password, type);
+    }
+    
+
     public long getRegistrartion() {return registrartion;}
     public void setRegistrartion(long registrartion) { this.registrartion = registrartion;}
     public String getCourse() { return course;}
