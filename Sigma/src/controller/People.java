@@ -5,25 +5,25 @@ public abstract class People {
     
     protected int Id;
     protected long cpf;
-    protected String name;
-    protected String address;
-    protected String fone;
-    protected int type;
-    protected String password;
+    protected String nome;
+    protected String endereco;
+    protected String telefone;
+    protected int tipo;
+    protected String senha;
     
     public People(){
         
     }
     
-    public People(int id, String nome, long cpf,String address,String fone, String password,int type ){
+    public People(int id, String nome, long cpf,String endereco,String telefone,String senha,int tipo ){
         
         this.Id = id;
-        this.name = name;
+        this.nome = this.nome;
         this.cpf = cpf;
-        this.address = address;
-        this.fone = fone;
-        this.password = password;
-        this.type = type;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.senha = senha;
+        this.tipo = tipo;
    
     }
       
@@ -32,16 +32,16 @@ public abstract class People {
     public void setId(int record) { this.Id = record;}
     public long getCpf() {   return cpf; }
     public void setCpf(long cpf) {  this.cpf = cpf; }
-    public String getName() { return name;}
-    public void setName(String name) { this.name = name; }
-    public String getAddress() {return address; }
-    public void setAddress(String address) {  this.address = address; }
-    public String getFone() { return fone; }
-    public void setFone(String fone) { this.fone = fone; }
-    public int getType() {return type;}
-    public void setType(int type) { this.type = type;}
-    public String getPassword() {return password;}
-    public void setPassword(String senha) {this.password = password;}
+    public String getNome() { return nome;}
+    public void setNome(String nome) { this.nome = nome; }
+    public String getEndereco() {return endereco; }
+    public void setEndereco(String endereco) {  this.endereco = endereco; }
+    public String getTelefone() { return telefone; }
+    public void setTelefone(String telefone) { this.telefone = telefone; }
+    public int getTipo() {return tipo;}
+    public void setTipo(int tipo) { this.tipo = tipo;}
+    public String getSenha() {return senha;}
+    public void setSenha(String senha) {this.senha = this.senha;}
     
     
     

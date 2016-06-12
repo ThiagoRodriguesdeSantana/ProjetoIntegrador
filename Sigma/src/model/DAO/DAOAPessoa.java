@@ -25,7 +25,7 @@ public class DAOAPessoa implements Pessoa{
         String inserir = "insert into pessoa(id_pessoa, nome, cpf, endereco, senha, tipo)values(?,?,?,?,?,?)"; 
         ps = conectar.prepareStatement(inserir);
         ps.setInt(1, objeto.getId());
-        ps.setString(2, objeto.getName());
+        ps.setString(2, objeto.getNome());
         ps.setLong(3, objeto.getCpf());
         ps.setString(4, objeto.getAddress());
         ps.setString(5, objeto.getPassword());
