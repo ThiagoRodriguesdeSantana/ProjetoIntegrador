@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import controller.interfaces.Aluno;
 
-public class DAOAluno implements Pessoa{
+public class DAOAluno implements Aluno{
      private Connection conectar = null;
      private PreparedStatement ps;
     
@@ -27,9 +27,9 @@ public class DAOAluno implements Pessoa{
         ps.setInt(1, objeto.getId());
         ps.setString(2, objeto.getNome());
         ps.setLong(3, objeto.getCpf());
-        ps.setString(4, objeto.getAddress());
-        ps.setString(5, objeto.getPassword());
-        ps.setInt(6, objeto.getType());
+        ps.setString(4, objeto.getEndereco());
+        ps.setString(5, objeto.getSenha());
+        ps.setInt(6, objeto.getTipo());
         
         ps.executeQuery();
         
