@@ -1,6 +1,6 @@
 
 package controller;
 
-public class Rh {
+public class Secretaria {
     
 }

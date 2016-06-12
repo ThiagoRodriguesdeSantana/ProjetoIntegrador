@@ -1,7 +1,7 @@
 
 package controller;
 
-public abstract class People {
+public abstract class Pessoa {
     
     protected int Id;
     protected long cpf;
@@ -11,11 +11,11 @@ public abstract class People {
     protected int tipo;
     protected String senha;
     
-    public People(){
+    public Pessoa(){
         
     }
     
-    public People(int id, String nome, long cpf,String endereco,String telefone,String senha,int tipo ){
+    public Pessoa(int id, String nome, long cpf,String endereco,String telefone,String senha,int tipo ){
         
         this.Id = id;
         this.nome = this.nome;

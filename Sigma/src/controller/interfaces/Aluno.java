@@ -5,14 +5,13 @@
  */
 package controller.interfaces;
 
-import controller.People;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public interface Pessoa {
+public interface Aluno {
     
-       public void incluir(People objeto)throws SQLException;
-       public void Atualizar(People objeto)throws SQLException;
+       public void incluir(controller.Pessoa objeto)throws SQLException;
+       public void Atualizar(controller.Pessoa objeto)throws SQLException;
        public void Deletar(int ID);
-       public ArrayList<People> buscar(String nome) throws  SQLException;
+       public ArrayList<controller.Pessoa> buscar(String nome) throws  SQLException;
 }

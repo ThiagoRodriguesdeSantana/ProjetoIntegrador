@@ -1,14 +1,14 @@
 
 package controller;
 
-public class Student extends People{
+public class Aluno extends Pessoa{
     
     private String curso;
     private String situacao;
 
     
     
-    public Student(int id, String nome, long cpf, String endereco,String telefone, String senha, int tipo, String curso,String situacao ) {
+    public Aluno(int id, String nome, long cpf, String endereco,String telefone, String senha, int tipo, String curso,String situacao ) {
         super(id, nome, cpf, telefone, endereco, senha, tipo);
         this.curso = curso;
         this.situacao = situacao;

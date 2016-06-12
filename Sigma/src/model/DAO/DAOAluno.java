@@ -5,21 +5,21 @@
  */
 package model.DAO;
 
-import controller.People;
-import controller.interfaces.Pessoa;
+import controller.Pessoa;
 import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import controller.interfaces.Aluno;
 
-public class DAOAPessoa implements Pessoa{
+public class DAOAluno implements Pessoa{
      private Connection conectar = null;
      private PreparedStatement ps;
     
 
-    public void incluir(People objeto) throws SQLException {
+    public void incluir(Pessoa objeto) throws SQLException {
         
         
         String inserir = "insert into pessoa(id_pessoa, nome, cpf, endereco, senha, tipo)values(?,?,?,?,?,?)"; 
@@ -37,7 +37,7 @@ public class DAOAPessoa implements Pessoa{
         }
 
     @Override
-    public void Atualizar(People objeto) throws SQLException {
+    public void Atualizar(Pessoa objeto) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -47,7 +47,7 @@ public class DAOAPessoa implements Pessoa{
     }
 
     @Override
-    public ArrayList<People> buscar(String nome) throws SQLException {
+    public ArrayList<Pessoa> buscar(String nome) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
