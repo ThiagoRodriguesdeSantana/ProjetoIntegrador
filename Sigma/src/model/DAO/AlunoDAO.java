@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import model.Conexao;
 
+
 public class AlunoDAO {
     private Connection conectar = null;
     
