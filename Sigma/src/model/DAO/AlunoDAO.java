@@ -17,16 +17,15 @@ public class AlunoDAO {
     }
     
     public void incluir(Aluno aluno)throws SQLException{
-        String comando = "insert into Contatos(id_aluno,nome,cpf,endereco,senha,id_tipo,id_estado,telefone)values(?,?,?,?,?)";
+        String comando = "insert into Contatos(nome,cpf,endereco,senha,id_tipo,id_estado,telefone)values(?,?,?,?,?,?,?)";
         PreparedStatement ps = conectar.prepareStatement(comando);
-        ps.setInt(1,aluno.getId());
-        ps.setString(2,aluno.getNome());
-        ps.setString(3,aluno.getCpf());
-        ps.setString(4, aluno.getEndereco());
-        ps.setString(5,aluno.getSenha());
-        ps.setInt(6,aluno.getTipo());
-        ps.setInt(7,aluno.getEstado());
-        ps.setString(8,aluno.getTelefone());
+        ps.setString(1,aluno.getNome());
+        ps.setString(2,aluno.getCpf());
+        ps.setString(3, aluno.getEndereco());
+        ps.setString(4,aluno.getSenha());
+        ps.setInt(5,aluno.getTipo());
+        ps.setInt(6,aluno.getEstado());
+        ps.setString(7,aluno.getTelefone());
         
         
         
