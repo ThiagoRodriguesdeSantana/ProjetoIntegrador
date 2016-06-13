@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import model.Conexao;
+import model.DAO.AlunoDAO;
 
 public class TelaCadastrarAluno extends javax.swing.JFrame {
     private Connection conectar = null;
@@ -163,7 +164,13 @@ public class TelaCadastrarAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-
+        
+        AlunoDAO gerenciar = new AlunoDAO();
+        
+        Aluno aluno = new Aluno();
+        
+        
+        aluno.incluir();
          
         
         tfNome.setText(""+((int)cbEstado.getSelectedIndex()+1));
