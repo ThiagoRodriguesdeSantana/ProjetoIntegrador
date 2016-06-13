@@ -9,11 +9,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import model.Conexao;
 
 
     public class ProfessorDAO implements ProfessorInter{
        private Connection conectar = null;
        private PreparedStatement ps; 
+       
+       public ProfessorDAO() throws ClassNotFoundException{
+            conectar = Conexao.getConexao();
+       }
 
     @Override
     public void incluir(Professor objeto) throws SQLException {
