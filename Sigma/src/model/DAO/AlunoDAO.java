@@ -17,15 +17,19 @@ public class AlunoDAO {
     }
     
     public void incluir(Aluno aluno)throws SQLException{
-        String comando = "insert into Contatos(cpf,endereco,id_aluno,id_estado,id_tipo,nome,senha)values(?,?,?,?,?)";
+        String comando = "insert into Contatos(id_aluno,nome,cpf,endereco,senha,id_tipo,id_estado,telefone)values(?,?,?,?,?)";
         PreparedStatement ps = conectar.prepareStatement(comando);
-        ps.setString(1,aluno.getCpf());
-        ps.setString(2, aluno.getEndereco());
-        ps.setInt(3,aluno.getId());
-        ps.setInt(4,aluno.getEstado());
-        ps.setInt(5,aluno.getTipo());
-        ps.setString(6,aluno.getNome());
-        ps.setString(7,aluno.getSenha());
+        ps.setInt(1,aluno.getId());
+        ps.setString(2,aluno.getNome());
+        ps.setString(3,aluno.getCpf());
+        ps.setString(4, aluno.getEndereco());
+        ps.setString(5,aluno.getSenha());
+        ps.setInt(6,aluno.getTipo());
+        ps.setInt(7,aluno.getEstado());
+        ps.setString(8,aluno.getTelefone());
+        
+        
+        
         ps.executeUpdate();
     }
     
@@ -36,13 +40,16 @@ public class AlunoDAO {
         ResultSet rs = ps.executeQuery();
         while(rs.next()){
             Aluno pessoa = new Aluno();
+            pessoa.setId(rs.getInt("id_aluno"));
+            pessoa.setNome(rs.getString("nome"));
             pessoa.setCpf(rs.getString("cpf"));
             pessoa.setEndereco(rs.getString("endereco"));
-            pessoa.setId(rs.getInt("id_aluno"));
-            pessoa.setEstado(rs.getInt("id_estado"));
-            pessoa.setTipo(rs.getInt("id_tipo"));
-            pessoa.setNome(rs.getString("nome"));
             pessoa.setSenha(rs.getString("senha"));
+            pessoa.setTipo(rs.getInt("id_tipo"));
+            pessoa.setEstado(rs.getInt("id_estado"));
+            pessoa.setTelefone(rs.getString("telefone"));
+            
+            
             dados.add(pessoa);
         }
         return dados;
