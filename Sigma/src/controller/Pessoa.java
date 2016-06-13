@@ -11,6 +11,7 @@ public abstract class Pessoa {
     protected int tipo;
     protected String senha;
     
+    
     public Pessoa(){
         
     }

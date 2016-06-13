@@ -1,6 +1,8 @@
 
 package controller;
 
+import static javax.swing.text.html.HTML.Tag.HEAD;
+
 public class Aluno extends Pessoa{
     
     private String curso;
