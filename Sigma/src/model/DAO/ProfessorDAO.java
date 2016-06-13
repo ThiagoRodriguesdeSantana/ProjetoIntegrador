@@ -18,15 +18,14 @@ import javax.swing.JOptionPane;
     @Override
     public void incluir(Professor objeto) throws SQLException {
 
-        String comando = "insert into professor(ID_PROFESSOR, NOME, CPF, ENDERECO, SENHA, ID_TIPO,ID_TITULACAO,TELEFONE)values(?,?,?,?,?,?,?,?)";
+        String comando = "insert into professor(NOME, CPF, ENDERECO, SENHA, ID_TIPO,ID_TITULACAO,TELEFONE)values(?,?,?,?,?,?)";
         ps = conectar.prepareStatement(comando);
-        ps.setInt(1, objeto.getId());
-        ps.setString(2, objeto.getNome());
-        ps.setString(3, objeto.getCpf());
-        ps.setString(4, objeto.getEndereco());
-        ps.setString(5, objeto.getSenha());
-        ps.setInt(6, objeto.getTipo());
-        ps.setInt(7, objeto.getTitulacao());
+        ps.setString(1, objeto.getNome());
+        ps.setString(2, objeto.getCpf());
+        ps.setString(3, objeto.getEndereco());
+        ps.setString(4, objeto.getSenha());
+        ps.setInt(5, objeto.getTipo());
+        ps.setInt(6, objeto.getTitulacao());
         ps.executeUpdate();
        
     }

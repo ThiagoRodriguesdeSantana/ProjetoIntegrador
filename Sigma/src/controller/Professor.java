@@ -10,6 +10,7 @@ public class Professor extends Pessoa{
         super(id, nome, cpf, endereco,telefone, senha, tipo);
         this.titulacao = titulacao;
     }
+  
     public Professor(){
         
     }
