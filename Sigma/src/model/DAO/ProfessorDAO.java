@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
-public class ProfessorDAO implements ProfessorInter{
+    public class ProfessorDAO implements ProfessorInter{
        private Connection conectar = null;
-     private PreparedStatement ps; 
+       private PreparedStatement ps; 
 
     @Override
     public void incluir(Professor objeto) throws SQLException {
@@ -133,10 +133,5 @@ public class ProfessorDAO implements ProfessorInter{
         return busca;
         
     }
-
-    
-
-    
-    
-    
+  
 }
