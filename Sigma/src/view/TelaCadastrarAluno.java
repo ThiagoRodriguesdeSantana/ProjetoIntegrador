@@ -1,5 +1,6 @@
 package view;
 
+import controller.Aluno;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -164,14 +165,14 @@ public class TelaCadastrarAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-        
-        AlunoDAO gerenciar = new AlunoDAO();
-        
-        Aluno aluno = new Aluno();
-        
-        
-        aluno.incluir();
-         
+
+        try{
+            AlunoDAO gerenciar = new AlunoDAO();
+            Aluno aluno = new Aluno();
+            gerenciar.incluir(aluno);
+        }catch(Exception e){
+            
+        }
         
         tfNome.setText(""+((int)cbEstado.getSelectedIndex()+1));
 
