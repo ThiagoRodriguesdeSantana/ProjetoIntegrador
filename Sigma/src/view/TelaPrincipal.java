@@ -5,6 +5,11 @@
  */
 package View;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import view.TelaCadastrarAluno;
+
 /**
  *
  * @author Cristiane Faria
@@ -254,7 +259,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jBNovoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoAlunoActionPerformed
         
-       
+        TelaCadastrarAluno tela = new TelaCadastrarAluno();
+        tela.setVisible(true);
     }//GEN-LAST:event_jBNovoAlunoActionPerformed
 
     private void jBGerenciarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGerenciarAlunoActionPerformed
