@@ -9,7 +9,7 @@ import model.Conexao;
 public class NovoAluno extends javax.swing.JInternalFrame {
     private Connection conectar = null;
     
-    public NovoAluno() throws SQLException {
+    public NovoAluno() throws SQLException, ClassNotFoundException {
         initComponents();
         conectar = Conexao.getConexao();
         cbEstado.removeAllItems();

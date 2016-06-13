@@ -23,7 +23,7 @@ import model.Conexao;
     @Override
     public void incluir(Professor objeto) throws SQLException {
 
-        String comando = "insert into professor(NOME, CPF, ENDERECO, SENHA, ID_TIPO,ID_TITULACAO,TELEFONE)values(?,?,?,?,?,?)";
+        String comando = "insert into professor(NOME, CPF, ENDERECO, SENHA, ID_TIPO,ID_TITULACAO,TELEFONE)values(?,?,?,?,?,?,?)";
         ps = conectar.prepareStatement(comando);
         ps.setString(1, objeto.getNome());
         ps.setString(2, objeto.getCpf());
@@ -31,6 +31,7 @@ import model.Conexao;
         ps.setString(4, objeto.getSenha());
         ps.setInt(5, objeto.getTipo());
         ps.setInt(6, objeto.getTitulacao());
+        ps.setString(7,objeto.getTelefone());
         ps.executeUpdate();
        
     }
