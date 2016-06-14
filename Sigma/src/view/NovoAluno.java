@@ -9,7 +9,7 @@ import model.Conexao;
 public class NovoAluno extends javax.swing.JInternalFrame {
     private Connection conectar = null;
     
-    public NovoAluno() throws SQLException {
+    public NovoAluno() throws SQLException, ClassNotFoundException {
         initComponents();
         conectar = Conexao.getConexao();
         cbEstado.removeAllItems();
@@ -51,6 +51,11 @@ public class NovoAluno extends javax.swing.JInternalFrame {
         cbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setText("Inserir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jBCancelar.setText("Cancelar");
         jBCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -156,6 +161,10 @@ public class NovoAluno extends javax.swing.JInternalFrame {
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_jBCancelarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

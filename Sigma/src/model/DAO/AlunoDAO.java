@@ -17,16 +17,15 @@ public class AlunoDAO {
     }
     
     public void incluir(Aluno aluno)throws SQLException{
-        String comando = "insert into Contatos(id_aluno,nome,cpf,endereco,senha,id_tipo,id_estado,telefone)values(?,?,?,?,?)";
+        String comando = "insert into aluno(nome,cpf,endereco,senha,id_tipo,id_estado,telefone)values(?,?,?,?,?,?,?)";
         PreparedStatement ps = conectar.prepareStatement(comando);
-        ps.setInt(1,aluno.getId());
-        ps.setString(2,aluno.getNome());
-        ps.setString(3,aluno.getCpf());
-        ps.setString(4, aluno.getEndereco());
-        ps.setString(5,aluno.getSenha());
-        ps.setInt(6,aluno.getTipo());
-        ps.setInt(7,aluno.getEstado());
-        ps.setString(8,aluno.getTelefone());
+        ps.setString(1,aluno.getNome());
+        ps.setString(2,aluno.getCpf());
+        ps.setString(3, aluno.getEndereco());
+        ps.setString(4,aluno.getSenha());
+        ps.setInt(5,aluno.getTipo());
+        ps.setInt(6,aluno.getEstado());
+        ps.setString(7,aluno.getTelefone());
         
         
         
@@ -35,7 +34,7 @@ public class AlunoDAO {
     
     public ArrayList listar() throws SQLException{
         ArrayList dados = new ArrayList();
-        String comando = "select * from alunos";
+        String comando = "select * from aluno";
         PreparedStatement ps = conectar.prepareStatement(comando);
         ResultSet rs = ps.executeQuery();
         while(rs.next()){
@@ -56,9 +55,45 @@ public class AlunoDAO {
     }
     
     public void excluir(String nome)throws SQLException{
-        String comando = "delete from alunos where nome = ?";
+        String comando = "delete from aluno where nome = ?";
         PreparedStatement ps = conectar.prepareStatement(comando);
         ps.setString(1, nome);;
+        ps.executeUpdate();
+    }
+    
+    public Aluno consultar(String nome)throws SQLException{
+        String comando = "select * from aluno where nome = ?";
+        PreparedStatement ps = conectar.prepareStatement(comando);
+        ps.setString(1,nome);
+        ResultSet rs = ps.executeQuery();
+        if(rs.next()){
+            Aluno aluno = new Aluno();
+            aluno.setId(rs.getInt("id_aluno"));
+            aluno.setNome(rs.getString("nome"));
+            aluno.setCpf(rs.getString("cpf"));
+            aluno.setEndereco(rs.getString("endereco"));
+            aluno.setSenha(rs.getString("senha"));
+            aluno.setTipo(rs.getInt("id_tipo"));
+            aluno.setEstado(rs.getInt("id_estado"));
+            aluno.setTelefone(rs.getString("telefone"));
+            
+            
+            return aluno;
+        }
+        return null;
+    }
+    
+    public void alterar (Aluno aluno)throws SQLException{
+        String comando = "update Aluno set nome=?, cpf=? , endereco=? ,senha=?,id_tipo=? , id_estado=?,telefone=? where id = ?";
+        PreparedStatement ps = conectar.prepareStatement(comando);
+        ps.setString(1,aluno.getNome());
+        ps.setString(2,aluno.getCpf());
+        ps.setString(3, aluno.getEndereco());
+        ps.setString(4,aluno.getSenha());
+        ps.setInt(5,aluno.getTipo());
+        ps.setInt(6,aluno.getEstado());
+        ps.setString(7,aluno.getTelefone());
+        ps.setInt(8,aluno.getId());
         ps.executeUpdate();
     }
 }

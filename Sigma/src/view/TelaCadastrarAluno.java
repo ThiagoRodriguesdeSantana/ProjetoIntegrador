@@ -1,9 +1,11 @@
 package view;
 
+import controller.Aluno;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import model.Conexao;
+import model.DAO.AlunoDAO;
 
 public class TelaCadastrarAluno extends javax.swing.JFrame {
     private Connection conectar = null;
@@ -164,10 +166,22 @@ public class TelaCadastrarAluno extends javax.swing.JFrame {
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
 
-         
-        
-        tfNome.setText(""+((int)cbEstado.getSelectedIndex()+1));
-
+        try{
+            String nome = tfNome.getText();
+            String cpf = tfCPF.getText();
+            String telefone = tfTelefone.getText();
+            String endereco = tfEndereco.getText();
+            int tipo = 1;
+            int estado = (int)cbEstado.getSelectedIndex()+1;
+            String senha = pfSenha.getText();
+            
+            
+            AlunoDAO gerenciar = new AlunoDAO();
+            Aluno aluno = new Aluno(nome,cpf,endereco,telefone,senha,tipo,estado);
+            gerenciar.incluir(aluno);
+        }catch(Exception e){
+            
+        }
     }//GEN-LAST:event_btnInserirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
