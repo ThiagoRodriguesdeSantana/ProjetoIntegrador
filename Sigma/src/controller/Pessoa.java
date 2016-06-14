@@ -16,10 +16,21 @@ public abstract class Pessoa {
         
     }
     
+    public Pessoa(String nome, String cpf,String endereco,String telefone,String senha,int tipo ){
+        
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.senha = senha;
+        this.tipo = tipo;
+   
+    }
+    
     public Pessoa(int id, String nome, String cpf,String endereco,String telefone,String senha,int tipo ){
         
         this.Id = id;
-        this.nome = this.nome;
+        this.nome = nome;
         this.cpf = cpf;
         this.endereco = endereco;
         this.telefone = telefone;

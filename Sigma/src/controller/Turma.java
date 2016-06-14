@@ -9,6 +9,6 @@ package controller;
  *
  * @author Thiago Poeta
  */
-public class Diciplina {
+public class Turma {
     
 }
