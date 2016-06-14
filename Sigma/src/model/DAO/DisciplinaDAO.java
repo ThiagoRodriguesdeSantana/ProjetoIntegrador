@@ -78,6 +78,16 @@ public class DisciplinaDAO implements DISCIPLINA {
 
     @Override
     public void alterar(Disciplina disciplina) throws SQLException {
+        String comando = "update disciplina set desc_disciplina=?, ementa=? , bibliografia=? ,prerequisito=?,id_periodo=? , id_professor =? where id = ?";
+        PreparedStatement ps = conectar.prepareStatement(comando);
+        ps.setString(1,disciplina.getDesc());
+        ps.setString(2,disciplina.getEmenta());
+        ps.setString(3, disciplina.getBibliografia());
+        ps.setString(4,disciplina.getPreRequisito());
+        ps.setInt(5,disciplina.getPeriodo());
+        ps.setInt(6,disciplina.getProfessor());
+        ps.setInt(7,disciplina.getId());
+        ps.executeUpdate();
     }
     
 }

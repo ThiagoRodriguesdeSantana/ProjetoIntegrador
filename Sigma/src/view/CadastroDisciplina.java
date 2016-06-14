@@ -5,17 +5,23 @@
  */
 package view;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import model.Conexao;
+
 /**
  *
  * @author bruno
  */
 public class CadastroDisciplina extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form CadastroDisciplina
-     */
+    private Connection conectar = null;
     public CadastroDisciplina() {
         initComponents();
+        conectar = Conexao.getConexao();
+        cbProfessor.removeAllItems();
+        preencherComboProfessor();
     }
 
     /**
@@ -37,13 +43,11 @@ public class CadastroDisciplina extends javax.swing.JInternalFrame {
         jBCancelar1 = new javax.swing.JButton();
         cbEstado2 = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        tfBibliografia = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        tfPrerequisito = new javax.swing.JTextField();
+        cbProfessor = new javax.swing.JComboBox<>();
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Nova Disciplina"));
 
@@ -77,11 +81,7 @@ public class CadastroDisciplina extends javax.swing.JInternalFrame {
 
         jLabel11.setText("Professor:");
 
-        jLabel12.setText("Situação:");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbProfessor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -110,15 +110,13 @@ public class CadastroDisciplina extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel9)
                                 .addComponent(jLabel8)
                                 .addComponent(jLabel10)
-                                .addComponent(jLabel11)
-                                .addComponent(jLabel12))
+                                .addComponent(jLabel11))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(cbEstado1, 0, 154, Short.MAX_VALUE)
-                                .addComponent(jTextField5)
-                                .addComponent(jTextField6)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(tfBibliografia)
+                                .addComponent(tfPrerequisito)
+                                .addComponent(cbProfessor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -139,23 +137,19 @@ public class CadastroDisciplina extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfBibliografia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfPrerequisito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(jLabel11))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(cbProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jBCancelar1))
@@ -188,20 +182,34 @@ public class CadastroDisciplina extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbEstado1;
     private javax.swing.JComboBox<String> cbEstado2;
+    private javax.swing.JComboBox<String> cbProfessor;
     private javax.swing.JButton jBCancelar1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField tfBibliografia;
+    private javax.swing.JTextField tfPrerequisito;
     // End of variables declaration//GEN-END:variables
+    
+    private void preencherComboProfessor() {
+        String sql = "select * from professor";
+        try{
+            PreparedStatement pst = conectar.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            
+            while(rs.next()){
+                cbProfessor.addItem(rs.getString("nome"));
+            }
+            
+        }catch(Exception e){
+            
+        }
+    }
+
 }

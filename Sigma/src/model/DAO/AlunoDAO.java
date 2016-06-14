@@ -26,9 +26,6 @@ public class AlunoDAO {
         ps.setInt(5,aluno.getTipo());
         ps.setInt(6,aluno.getEstado());
         ps.setString(7,aluno.getTelefone());
-        
-        
-        
         ps.executeUpdate();
     }
     
