@@ -14,7 +14,6 @@ public class Professor extends Pessoa{
     public Professor(){
         
     }
-
    
 
     public int getTitulacao() { return titulacao;}

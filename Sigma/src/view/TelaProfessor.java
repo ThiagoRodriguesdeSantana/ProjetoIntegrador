@@ -158,6 +158,7 @@ public class TelaProfessor extends javax.swing.JFrame {
         
         try {
             
+            int id = 01;
             String nome =  jTextFieldNome.getText();
             String cpf = jTextFieldCpf.getText();
             String endereco = jTextFieldEnderece.getText();
@@ -166,7 +167,7 @@ public class TelaProfessor extends javax.swing.JFrame {
             int titulacao = Integer.parseInt(jTextFieldTitulacao.getText());
             String telefone = jTextFieldTelefone.getText();
             
-            Professor professor = new Professor(tipo, nome, cpf, endereco, telefone, senha, tipo, titulacao);
+            Professor professor = new Professor(id, nome, cpf, endereco, telefone, senha, tipo, titulacao);
             
             ProfessorDAO p = new ProfessorDAO();
             
