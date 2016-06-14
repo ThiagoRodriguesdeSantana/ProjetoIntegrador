@@ -2,49 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group name="NetbeansGit">
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/Register.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/People.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Student.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/TelaAluno.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/TelaPrincipal.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/TelaProfessor.java</file>
-        </group>
-        <group name="NetBeansProjects">
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/NovoAluno.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/model/DAO/AlunoDAO.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Pessoa.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/turma.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Professor.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/TelaProfessor.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Aluno.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/interfaces/ALUNO.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Avaliação.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Curso.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/interfaces/ProfessorInter.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/TelaCadastrarAluno.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/TelaPrincipal.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/model/DAO/ProfessorDAO.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/model/Conexao.java</file>
-            <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/Diciplina.java</file>
-=======
         <group name="Java Projects">
+            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/model/DAO/AlunoDAO.java</file>
             <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/Aluno.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/Professor.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/Pessoa.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/Secretaria.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/view/TelaLogin.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/RH.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/Coordenador.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/view/TelaGerencia.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/view/TelaProfessor.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/view/TelaPrincipal.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/view/TelaAluno.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/model/DAO/DAOAluno.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/view/Register.java</file>
-            <file>file:/home/bruno/Git/ProjetoIntegrador/Sigma/src/controller/interfaces/Aluno.java</file>
->>>>>>> c03ac99df9a5c525ad613eb86b70e3c4af37c811
         </group>
     </open-files>
 </project-private>

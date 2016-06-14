@@ -167,15 +167,21 @@ public class TelaCadastrarAluno extends javax.swing.JFrame {
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
 
         try{
+            String nome = tfNome.getText();
+            String cpf = tfCPF.getText();
+            String telefone = tfTelefone.getText();
+            String endereco = tfEndereco.getText();
+            int tipo = 1;
+            int estado = (int)cbEstado.getSelectedIndex()+1;
+            String senha = pfSenha.getText();
+            
+            
             AlunoDAO gerenciar = new AlunoDAO();
-            Aluno aluno = new Aluno();
+            Aluno aluno = new Aluno(nome,cpf,endereco,telefone,senha,tipo,estado);
             gerenciar.incluir(aluno);
         }catch(Exception e){
             
         }
-        
-        tfNome.setText(""+((int)cbEstado.getSelectedIndex()+1));
-
     }//GEN-LAST:event_btnInserirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

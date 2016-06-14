@@ -12,6 +12,13 @@ public class Aluno extends Pessoa{
     public Aluno(){
         
     }
+
+    public Aluno(String nome, String cpf, String endereco, String telefone, String senha, int tipo,int estado) {
+        super(nome, cpf, endereco, telefone, senha, tipo);
+        this.estado = estado;
+    }
+    
+    
     
     public Aluno(int id, String nome, String cpf, String endereco,String telefone, String senha, int tipo, String curso,int estado ) {
         super(id, nome, cpf, telefone, endereco, senha, tipo);
