@@ -92,21 +92,11 @@ import model.Conexao;
     }
 
     @Override
-    public void Delet(int ID) {
- 
-           Professor professor = new Professor();
-        professor.setId(ID);
-       
-        try {
-            String delet = "DELETE FROM agendamentos WHERE ID = ?";
-           ps = conectar.prepareStatement(delet);
-            ps.setInt(1,professor.getId());
-             ps.execute();
-             ps.close();
-             
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
+    public void excluir(int id)throws SQLException{
+        String comando = "delete from professor where id_professor = ?";
+        PreparedStatement ps = conectar.prepareStatement(comando);
+        ps.setInt(1, id);;
+        ps.executeUpdate();
     }
 
     @Override

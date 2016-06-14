@@ -6,6 +6,10 @@
 package view;
 
 import controller.Aluno;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import model.Conexao;
 import model.DAO.AlunoDAO;
 
 /**
@@ -14,11 +18,12 @@ import model.DAO.AlunoDAO;
  */
 public class CadastroAluno extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form CadastroAluno
-     */
+    private Connection conectar = null;
     public CadastroAluno() {
         initComponents();
+        conectar = Conexao.getConexao();
+        cbEstado.removeAllItems();
+        preencherCombo();
     }
 
     /**
@@ -203,4 +208,19 @@ public class CadastroAluno extends javax.swing.JInternalFrame {
     private javax.swing.JTextField tfNome;
     private javax.swing.JTextField tfTelefone;
     // End of variables declaration//GEN-END:variables
+
+    private void preencherCombo() {
+        String sql = "select * from estado";
+        try{
+            PreparedStatement pst = conectar.prepareStatement(sql);
+            ResultSet rs = pst.executeQuery();
+            
+            while(rs.next()){
+                cbEstado.addItem(rs.getString("desc_estado"));
+            }
+            
+        }catch(Exception e){
+            
+        }
+    }
 }

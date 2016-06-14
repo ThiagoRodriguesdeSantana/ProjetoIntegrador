@@ -1,8 +1,6 @@
 
 package controller;
 
-import static javax.swing.text.html.HTML.Tag.HEAD;
-
 public class Aluno extends Pessoa{
     
     private String curso;
@@ -32,5 +30,19 @@ public class Aluno extends Pessoa{
     public void setEstado(int estado) { this.estado = estado; }
     public int getEstado(){return estado;}
 
-    
+    public String descEstado(){
+        String descEstado = "";
+        
+        if(this.estado == 1){
+            descEstado = "Matriculado";
+        }if(this.estado == 2){
+            descEstado = "Trancado";
+        }if(this.estado == 3){
+            descEstado = "Formado";
+        }if(this.estado == 4){
+            descEstado = "Evadido";
+        }
+        
+        return descEstado;
+    }
 }

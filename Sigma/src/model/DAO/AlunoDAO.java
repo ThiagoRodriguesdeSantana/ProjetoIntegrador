@@ -54,10 +54,10 @@ public class AlunoDAO {
         return dados;
     }
     
-    public void excluir(String nome)throws SQLException{
-        String comando = "delete from aluno where nome = ?";
+    public void excluir(int id)throws SQLException{
+        String comando = "delete from aluno where id_aluno = ?";
         PreparedStatement ps = conectar.prepareStatement(comando);
-        ps.setString(1, nome);;
+        ps.setInt(1, id);;
         ps.executeUpdate();
     }
     
