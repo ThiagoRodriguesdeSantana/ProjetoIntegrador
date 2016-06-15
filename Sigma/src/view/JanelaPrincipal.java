@@ -24,17 +24,18 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         desktopPrincipal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        mnNovo = new javax.swing.JMenu();
+        miNovoAluno = new javax.swing.JMenuItem();
+        miNovoProfessor = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        miNovoDisciplina = new javax.swing.JMenuItem();
+        miPeriodo = new javax.swing.JMenuItem();
+        miNovoCurso = new javax.swing.JMenuItem();
+        mnGerenciar = new javax.swing.JMenu();
+        miGerenciarAluno = new javax.swing.JMenuItem();
+        miGerenciarProfessor = new javax.swing.JMenuItem();
+        miGerenciarTurma = new javax.swing.JMenuItem();
+        miGerenciarCurso = new javax.swing.JMenuItem();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -51,43 +52,86 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addComponent(desktopPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Novo");
+        mnNovo.setText("Novo");
 
-        jMenuItem1.setText("Aluno");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        miNovoAluno.setText("Aluno");
+        miNovoAluno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                miNovoAlunoActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        mnNovo.add(miNovoAluno);
 
-        jMenuItem2.setText("Professor");
-        jMenu1.add(jMenuItem2);
-        jMenu1.add(jSeparator1);
+        miNovoProfessor.setText("Professor");
+        miNovoProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miNovoProfessorActionPerformed(evt);
+            }
+        });
+        mnNovo.add(miNovoProfessor);
+        mnNovo.add(jSeparator1);
 
-        jMenuItem5.setText("Curso");
-        jMenu1.add(jMenuItem5);
+        miNovoDisciplina.setText("Disciplina");
+        miNovoDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miNovoDisciplinaActionPerformed(evt);
+            }
+        });
+        mnNovo.add(miNovoDisciplina);
 
-        jMenuItem4.setText("Disciplina");
-        jMenu1.add(jMenuItem4);
+        miPeriodo.setText("Periodo");
+        miPeriodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miPeriodoActionPerformed(evt);
+            }
+        });
+        mnNovo.add(miPeriodo);
 
-        jMenuBar1.add(jMenu1);
+        miNovoCurso.setText("Curso");
+        miNovoCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miNovoCursoActionPerformed(evt);
+            }
+        });
+        mnNovo.add(miNovoCurso);
 
-        jMenu2.setText("Gerenciar");
+        jMenuBar1.add(mnNovo);
 
-        jMenuItem6.setText("Alunos");
-        jMenu2.add(jMenuItem6);
+        mnGerenciar.setText("Gerenciar");
 
-        jMenuItem7.setText("Professores");
-        jMenu2.add(jMenuItem7);
+        miGerenciarAluno.setText("Alunos");
+        miGerenciarAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miGerenciarAlunoActionPerformed(evt);
+            }
+        });
+        mnGerenciar.add(miGerenciarAluno);
 
-        jMenuItem8.setText("Turmas");
-        jMenu2.add(jMenuItem8);
+        miGerenciarProfessor.setText("Professores");
+        miGerenciarProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miGerenciarProfessorActionPerformed(evt);
+            }
+        });
+        mnGerenciar.add(miGerenciarProfessor);
 
-        jMenuItem9.setText("Cursos");
-        jMenu2.add(jMenuItem9);
+        miGerenciarTurma.setText("Turmas");
+        miGerenciarTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miGerenciarTurmaActionPerformed(evt);
+            }
+        });
+        mnGerenciar.add(miGerenciarTurma);
 
-        jMenuBar1.add(jMenu2);
+        miGerenciarCurso.setText("Cursos");
+        miGerenciarCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miGerenciarCursoActionPerformed(evt);
+            }
+        });
+        mnGerenciar.add(miGerenciarCurso);
+
+        jMenuBar1.add(mnGerenciar);
 
         setJMenuBar(jMenuBar1);
 
@@ -105,29 +149,75 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void miNovoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNovoAlunoActionPerformed
         CadastroAluno cadastroAluno = new CadastroAluno();
         desktopPrincipal.add(cadastroAluno);
         cadastroAluno.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_miNovoAlunoActionPerformed
+
+    private void miNovoProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNovoProfessorActionPerformed
+        CadastroProfessor cadastroProfessor = new CadastroProfessor();
+        desktopPrincipal.add(cadastroProfessor);
+        cadastroProfessor.setVisible(true);
+    }//GEN-LAST:event_miNovoProfessorActionPerformed
+
+    private void miNovoCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNovoCursoActionPerformed
+    }//GEN-LAST:event_miNovoCursoActionPerformed
+
+    private void miPeriodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miPeriodoActionPerformed
+        CadastroPeriodo cadastroPeriodo = new CadastroPeriodo();
+        desktopPrincipal.add(cadastroPeriodo);
+        cadastroPeriodo.setVisible(true);
+    }//GEN-LAST:event_miPeriodoActionPerformed
+
+    private void miNovoDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNovoDisciplinaActionPerformed
+        CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
+        desktopPrincipal.add(cadastroDisciplina);
+        cadastroDisciplina.setVisible(true);
+    }//GEN-LAST:event_miNovoDisciplinaActionPerformed
+
+    private void miGerenciarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGerenciarAlunoActionPerformed
+        GerenciarAluno gerenciarAluno = new GerenciarAluno();
+        desktopPrincipal.add(gerenciarAluno);
+        gerenciarAluno.setVisible(true);
+    }//GEN-LAST:event_miGerenciarAlunoActionPerformed
+
+    private void miGerenciarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGerenciarProfessorActionPerformed
+        GerenciarProfessor gerenciarProfessor = new GerenciarProfessor();
+        desktopPrincipal.add(gerenciarProfessor);
+        gerenciarProfessor.setVisible(true);
+    }//GEN-LAST:event_miGerenciarProfessorActionPerformed
+
+    private void miGerenciarTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGerenciarTurmaActionPerformed
+        GerenciarTurma gerenciarTurma = new GerenciarTurma();
+        desktopPrincipal.add(gerenciarTurma);
+        gerenciarTurma.setVisible(true);
+    }//GEN-LAST:event_miGerenciarTurmaActionPerformed
+
+    private void miGerenciarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGerenciarCursoActionPerformed
+        /*GerenciarCurso gerenciarCurso = new GerenciarCurso();
+        desktopPrincipal.add(gerenciarCurso);
+        gerenciarCurso.setVisible(true);*/
+    }//GEN-LAST:event_miGerenciarCursoActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPrincipal;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuItem miGerenciarAluno;
+    private javax.swing.JMenuItem miGerenciarCurso;
+    private javax.swing.JMenuItem miGerenciarProfessor;
+    private javax.swing.JMenuItem miGerenciarTurma;
+    private javax.swing.JMenuItem miNovoAluno;
+    private javax.swing.JMenuItem miNovoCurso;
+    private javax.swing.JMenuItem miNovoDisciplina;
+    private javax.swing.JMenuItem miNovoProfessor;
+    private javax.swing.JMenuItem miPeriodo;
+    private javax.swing.JMenu mnGerenciar;
+    private javax.swing.JMenu mnNovo;
     // End of variables declaration//GEN-END:variables
 }
