@@ -40,6 +40,8 @@ public class GerenciarTurma extends javax.swing.JInternalFrame {
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
 
+        setClosable(true);
+
         jPGerenciarProfessor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
