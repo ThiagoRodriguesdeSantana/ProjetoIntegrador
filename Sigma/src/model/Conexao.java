@@ -19,11 +19,9 @@ public class Conexao {
                 String driver = "com.mysql.jdbc.Driver";
                 String url = "jdbc:mysql://localhost/sigma";
 
-                String user = "sigma";
-                String password = "bancodedados";
 
-//                String user = "root";
-//                String password = "root12";
+                String user = "root";
+                String password = "root12";
 
             
                 Class.forName(driver);

@@ -61,6 +61,11 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jbAcessar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/accept.png"))); // NOI18N
         jbAcessar.setText("Acessar");
+        jbAcessar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAcessarActionPerformed(evt);
+            }
+        });
 
         jbCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/delete.png"))); // NOI18N
         jbCancelar.setText("Cancelar");
@@ -135,6 +140,12 @@ public class TelaLogin extends javax.swing.JFrame {
     private void jtfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfUsuarioActionPerformed
+
+    private void jbAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAcessarActionPerformed
+        JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
+        janelaPrincipal.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbAcessarActionPerformed
 
     /**
      * @param args the command line arguments
