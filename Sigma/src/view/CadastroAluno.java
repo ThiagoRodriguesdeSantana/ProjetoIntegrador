@@ -6,6 +6,8 @@
 package view;
 
 import controller.Aluno;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -50,6 +52,8 @@ public class CadastroAluno extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         pfSenha = new javax.swing.JPasswordField();
+
+        setClosable(true);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.MatteBorder(null), "Novo Aluno"));
 

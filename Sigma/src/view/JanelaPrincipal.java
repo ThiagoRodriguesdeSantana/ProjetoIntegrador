@@ -36,6 +36,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         miGerenciarProfessor = new javax.swing.JMenuItem();
         miGerenciarTurma = new javax.swing.JMenuItem();
         miGerenciarCurso = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -133,6 +134,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(mnGerenciar);
 
+        jMenu1.setText("Ajuda");
+        jMenuBar1.add(jMenu1);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -147,6 +151,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void miNovoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNovoAlunoActionPerformed
@@ -177,13 +182,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_miNovoDisciplinaActionPerformed
 
     private void miGerenciarAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGerenciarAlunoActionPerformed
-        GerenciarAluno gerenciarAluno = new GerenciarAluno();
+        GerenciarAluno gerenciarAluno = new GerenciarAluno(desktopPrincipal);
         desktopPrincipal.add(gerenciarAluno);
         gerenciarAluno.setVisible(true);
     }//GEN-LAST:event_miGerenciarAlunoActionPerformed
 
     private void miGerenciarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miGerenciarProfessorActionPerformed
-        GerenciarProfessor gerenciarProfessor = new GerenciarProfessor();
+        GerenciarProfessor gerenciarProfessor = new GerenciarProfessor(desktopPrincipal);
         desktopPrincipal.add(gerenciarProfessor);
         gerenciarProfessor.setVisible(true);
     }//GEN-LAST:event_miGerenciarProfessorActionPerformed
@@ -204,6 +209,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPrincipal;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
