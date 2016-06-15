@@ -25,5 +25,12 @@
             <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/controller/interfaces/ALUNO.java</file>
             <file>file:/C:/Users/Thiago%20Poeta/Documents/NetbeansGit/ProjetoIntegrador/ProjetoIntegrador/Sigma/src/view/CadastroProfessor.java</file>
         </group>
+        <group>
+            <file>file:/home/turbomais/Git/ProjetoIntegrador/Sigma/src/view/GerenciarAluno.java</file>
+            <file>file:/home/turbomais/Git/ProjetoIntegrador/Sigma/src/view/CadastroAluno.java</file>
+            <file>file:/home/turbomais/Git/ProjetoIntegrador/Sigma/src/controller/Pessoa.java</file>
+            <file>file:/home/turbomais/Git/ProjetoIntegrador/Sigma/src/controller/Aluno.java</file>
+            <file>file:/home/turbomais/Git/ProjetoIntegrador/Sigma/src/model/DAO/AlunoDAO.java</file>
+        </group>
     </open-files>
 </project-private>

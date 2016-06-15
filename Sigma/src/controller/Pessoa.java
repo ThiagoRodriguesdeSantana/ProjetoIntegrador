@@ -41,7 +41,7 @@ public abstract class Pessoa {
       
 
     public int getId() { return Id; }
-    public void setId(int record) { this.Id = record;}
+    public void setId(int id) { this.Id = id;}
     public String getCpf() {   return cpf; }
     public void setCpf(String cpf) {  this.cpf = cpf; }
     public String getNome() { return nome;}

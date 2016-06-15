@@ -62,6 +62,11 @@ public class GerenciarAluno extends javax.swing.JInternalFrame {
         btnLocalizar.setText("Localizar");
 
         btnListarTudo.setText("Listar Tudo");
+        btnListarTudo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListarTudoActionPerformed(evt);
+            }
+        });
 
         tbListagem.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,6 +79,11 @@ public class GerenciarAluno extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tbListagem);
 
         btnAlterar.setText("Alterar");
+        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarActionPerformed(evt);
+            }
+        });
 
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -180,6 +190,34 @@ public class GerenciarAluno extends javax.swing.JInternalFrame {
         cadastroAluno.setVisible(true);
     }//GEN-LAST:event_btnNovoAlunoActionPerformed
 
+    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+        try{
+            AlunoDAO alunoDAO = new AlunoDAO();
+            int linha = tbListagem.getSelectedRow();
+            model = (DefaultTableModel) tbListagem.getModel();
+            Aluno aluno =  new Aluno();
+            
+            String id = (String)model.getValueAt(linha,0);
+            aluno.setId(Integer.parseInt(id));
+            aluno.setNome((String)tbListagem.getValueAt(linha,1));
+            aluno.setCpf((String)tbListagem.getValueAt(linha,2));
+            aluno.setEndereco((String)tbListagem.getValueAt(linha,3));
+            aluno.setTelefone((String)tbListagem.getValueAt(linha,4));
+            aluno.setEstado(1);
+            aluno.setTipo(1);
+            
+            CadastroAluno cadastroAluno = new CadastroAluno(aluno);
+            desktop.add(cadastroAluno);
+            cadastroAluno.setVisible(true);
+        }catch(Exception e){
+            
+        }
+    }//GEN-LAST:event_btnAlterarActionPerformed
+
+    private void btnListarTudoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarTudoActionPerformed
+        listar();
+    }//GEN-LAST:event_btnListarTudoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlterar;
@@ -219,4 +257,5 @@ public class GerenciarAluno extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(rootPane,erro.getMessage());
         }  
     }
+    
 }
