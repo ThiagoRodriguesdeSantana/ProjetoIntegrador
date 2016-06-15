@@ -16,16 +16,20 @@ public class Conexao {
     
         else{
             try{
+//                String driver = "com.mysql.jdbc.Driver";
+//                String url = "jdbc:mysql://localhost/sigma";
+//<<<<<<< HEAD
+//                String user = "sigma";
+//                String password = "bancodedados";
+//=======
+//                String user = "root";
+//                String password = "root12";
+//>>>>>>> c5f99e1303a3ffbac1bd86bd4bd7b04beb6218a0
                 String driver = "com.mysql.jdbc.Driver";
-                String url = "jdbc:mysql://localhost/sigma";
-<<<<<<< HEAD
-                String user = "sigma";
+                String url = "jdbc:mysql://127.0.0.1:3306/sigma";
+                String user = "root";  
                 String password = "bancodedados";
-=======
-                String user = "root";
-                String password = "root12";
->>>>>>> c5f99e1303a3ffbac1bd86bd4bd7b04beb6218a0
-            
+               
                 Class.forName(driver);
                 conexao = DriverManager.getConnection(url,user,password);
 
