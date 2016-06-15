@@ -68,7 +68,7 @@ public class GerenciarAluno extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Nome:", "CPF:", "Endereço", "Telefone", "Estado"
+                "ID", "Nome:", "CPF:", "Endereço", "Telefone", "Estado"
             }
         ));
         jScrollPane1.setViewportView(tbListagem);

@@ -59,7 +59,7 @@ public class AlunoDAO {
     }
     
     public Aluno consultar(String nome)throws SQLException{
-        String comando = "select * from aluno where nome = ?";
+        String comando = "select * from aluno where nome like ?";
         PreparedStatement ps = conectar.prepareStatement(comando);
         ps.setString(1,nome);
         ResultSet rs = ps.executeQuery();
