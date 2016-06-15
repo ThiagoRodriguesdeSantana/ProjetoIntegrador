@@ -59,7 +59,7 @@ public class AlunoDAO {
     }
     
     public Aluno consultar(String nome)throws SQLException{
-        String comando = "select * from aluno where nome = ?";
+        String comando = "select * from aluno where nome like ?";
         PreparedStatement ps = conectar.prepareStatement(comando);
         ps.setString(1,nome);
         ResultSet rs = ps.executeQuery();
@@ -81,16 +81,15 @@ public class AlunoDAO {
     }
     
     public void alterar (Aluno aluno)throws SQLException{
-        String comando = "update Aluno set nome=?, cpf=? , endereco=? ,senha=?,id_tipo=? , id_estado=?,telefone=? where id = ?";
+        String comando = "update aluno set nome=?, cpf=? , endereco=?,id_tipo=? , id_estado=?,telefone=? where id = ?";
         PreparedStatement ps = conectar.prepareStatement(comando);
         ps.setString(1,aluno.getNome());
         ps.setString(2,aluno.getCpf());
         ps.setString(3, aluno.getEndereco());
-        ps.setString(4,aluno.getSenha());
-        ps.setInt(5,aluno.getTipo());
-        ps.setInt(6,aluno.getEstado());
-        ps.setString(7,aluno.getTelefone());
-        ps.setInt(8,aluno.getId());
+        ps.setInt(4,aluno.getTipo());
+        ps.setInt(5,aluno.getEstado());
+        ps.setString(6,aluno.getTelefone());
+        ps.setInt(7,aluno.getId());
         ps.executeUpdate();
     }
 }

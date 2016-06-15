@@ -34,6 +34,7 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+<<<<<<< HEAD
         jtfDescricao = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jBCancelar = new javax.swing.JButton();
@@ -43,6 +44,15 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
         CbHorario = new javax.swing.JComboBox();
 
         jTextField2.setText("jTextField2");
+=======
+        jtfCod = new javax.swing.JTextField();
+        cbEstado = new javax.swing.JComboBox<>();
+        btnInserir = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        cbEstado1 = new javax.swing.JComboBox<>();
+>>>>>>> 0a53d67c8fe1f2c509e2d9fc9c52ab2ff4dcdb47
+
+        setClosable(true);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.MatteBorder(null), "Nova Turma"));
 
@@ -52,19 +62,19 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Horário:");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/add.png"))); // NOI18N
-        jButton1.setText("Inserir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnInserir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/add.png"))); // NOI18N
+        btnInserir.setText("Inserir");
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnInserirActionPerformed(evt);
             }
         });
 
-        jBCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/delete.png"))); // NOI18N
-        jBCancelar.setText("Cancelar");
-        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/delete.png"))); // NOI18N
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBCancelarActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -84,6 +94,7 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
@@ -91,6 +102,12 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbCurso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfDescricao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+=======
+                        .addGap(38, 38, 38)
+                        .addComponent(btnInserir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCancelar))
+>>>>>>> 0a53d67c8fe1f2c509e2d9fc9c52ab2ff4dcdb47
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,9 +147,15 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
                     .addComponent(CBoAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<<<<<<< HEAD
                     .addComponent(jButton1)
                     .addComponent(jBCancelar))
                 .addContainerGap(48, Short.MAX_VALUE))
+=======
+                    .addComponent(btnInserir)
+                    .addComponent(btnCancelar))
+                .addContainerGap(72, Short.MAX_VALUE))
+>>>>>>> 0a53d67c8fe1f2c509e2d9fc9c52ab2ff4dcdb47
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -155,8 +178,9 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
 
+<<<<<<< HEAD
         try {
             
             int id = 1;
@@ -175,18 +199,28 @@ public class CadastroTurma extends javax.swing.JInternalFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+=======
+    }//GEN-LAST:event_btnInserirActionPerformed
+>>>>>>> 0a53d67c8fe1f2c509e2d9fc9c52ab2ff4dcdb47
 
-    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         this.dispose();
-    }//GEN-LAST:event_jBCancelarActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JComboBox CBoAno;
     private javax.swing.JComboBox CbHorario;
     private javax.swing.JComboBox<String> cbCurso;
     private javax.swing.JButton jBCancelar;
     private javax.swing.JButton jButton1;
+=======
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnInserir;
+    private javax.swing.JComboBox<String> cbEstado;
+    private javax.swing.JComboBox<String> cbEstado1;
+>>>>>>> 0a53d67c8fe1f2c509e2d9fc9c52ab2ff4dcdb47
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

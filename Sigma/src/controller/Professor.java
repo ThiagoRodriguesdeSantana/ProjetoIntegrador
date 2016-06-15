@@ -19,7 +19,6 @@ public class Professor extends Pessoa{
         super(nome, cpf, endereco,telefone, senha, tipo);
         this.titulacao = titulacao;
     }
- 
 
     public int getTitulacao() { return titulacao;}
     public void setTitulacao(int titulacao) { this.titulacao = titulacao;}
